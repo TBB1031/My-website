@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Business</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Welcome to Modern Business</h1>
+    <p>Your one-stop solution for digital excellence.</p>
+    <a href="#services" class="btn">Explore Services</a>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a team of passionate developers, designers, and strategists driven to create impactful digital solutions.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Modern, fast, and scalable websites tailored to your business needs.</p>
+      </div>
+      <div class="card">
+        <h3>UI/UX Design</h3>
+        <p>Stunning, user-centered designs that enhance user experience.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>Rank higher, grow faster, and reach more customers online.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-response"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Modern Business. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
