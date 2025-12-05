@@ -1,56 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Business</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Nebula — a clean, responsive starter website with modern UI, dark mode, and accessible components." />
+  <title>Nebula — Modern Responsive Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header class="hero">
-    <h1>Welcome to Modern Business</h1>
-    <p>Your one-stop solution for digital excellence.</p>
-    <a href="#services" class="btn">Explore Services</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Nebula homepage">
+        <!-- simple logo -->
+        <svg class="logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#6ee7b7"/>
+              <stop offset="1" stop-color="#60a5fa"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12" cy="12" r="10" fill="url(#g1)"/>
+          <path d="M8 12a4 4 0 0 0 8 0" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">Nebula</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" class="nav-toggle" title="Toggle menu">
+          <span class="sr-only">Menu</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/></svg>
+        </button>
+
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="btn btn-ghost">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>We are a team of passionate developers, designers, and strategists driven to create impactful digital solutions.</p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="display">Build beautiful web experiences — fast.</h1>
+          <p class="lead">Nebula is a lightweight starter kit with modern design, accessible components and a clean developer experience. Responsive, performant, and themeable.</p>
+          <div class="hero-ctas">
+            <a href="#pricing" class="btn btn-primary">Get started</a>
+            <a href="#features" class="btn btn-outline">See features</a>
+          </div>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Modern, fast, and scalable websites tailored to your business needs.</p>
+          <ul class="hero-meta">
+            <li><strong>Zero deps</strong> — just HTML/CSS/JS</li>
+            <li><strong>Accessible</strong> — ARIA & keyboard-ready</li>
+            <li><strong>Responsive</strong> — mobile-first</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- decorative code mockup -->
+          <div class="device">
+            <pre class="code">
+<span class="c">/* Example component */</span>
+<span class="k">.btn</span> { <span class="v">padding</span>: <span class="n">0.7rem 1.2rem</span>; }
+            </pre>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>UI/UX Design</h3>
-        <p>Stunning, user-centered designs that enhance user experience.</p>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Features that accelerate your workflow</h2>
+        <p class="section-sub">Small, focused components and utilities to get you from idea → production.</p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24"><path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Lightweight</h3>
+            <p>Minimal CSS and vanilla JS — small footprint for fast loading.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24"><path d="M12 2v20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Accessible</h3>
+            <p>Keyboard-first components, proper ARIA roles, and readable colors.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+            </div>
+            <h3>Themeable</h3>
+            <p>CSS variables make it easy to customize colors and typography.</p>
+          </article>
+        </div>
       </div>
-      <div class="card">
-        <h3>SEO Optimization</h3>
-        <p>Rank higher, grow faster, and reach more customers online.</p>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-sub">Simple pricing: scale up when you're ready.</p>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Free</h3>
+            <p class="price">$0 <span class="price-sub">/ forever</span></p>
+            <ul class="price-features">
+              <li>Core components</li>
+              <li>Community support</li>
+              <li>MIT license</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Start free</a>
+          </div>
+
+          <div class="price-card popular">
+            <div class="badge">Popular</div>
+            <h3>Pro</h3>
+            <p class="price">$12 <span class="price-sub">/ month</span></p>
+            <ul class="price-features">
+              <li>Premium templates</li>
+              <li>Priority email support</li>
+              <li>Faster updates</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Buy Pro</a>
+          </div>
+
+          <div class="price-card">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <ul class="price-features">
+              <li>Dedicated support</li>
+              <li>On-prem options</li>
+              <li>Volume licensing</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-grid" role="list">
+          <details class="faq" role="listitem">
+            <summary>Do I need build tools?</summary>
+            <p>No — Nebula runs with plain HTML/CSS/JS. If you like a build step, use Vite/Parcel for convenience.</p>
+          </details>
+
+          <details class="faq" role="listitem">
+            <summary>Is this accessible?</summary>
+            <p>Yes: keyboard, focus styles, semantics and ARIA attributes were considered.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Talk to us</h2>
+          <p>Have a question or want a demo? Send a message and we'll get back within 1–2 business days.</p>
+          <dl class="contact-meta">
+            <dt>Email</dt><dd>hello@nebula.example</dd>
+            <dt>Phone</dt><dd>+1 (555) 123-4567</dd>
+          </dl>
+          <div class="small">Or use the form — client-side validated (no data is sent in this demo).</div>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required minlength="2" maxlength="80" placeholder="Your name" />
+            <div class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            <div class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell us about your project"></textarea>
+            <div class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row form-actions">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+
+          <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>&copy; <span id="year"></span> Nebula — Built with ❤️</div>
+      <div class="foot-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="form-response"></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Modern Business. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
 </body>
 </html>
